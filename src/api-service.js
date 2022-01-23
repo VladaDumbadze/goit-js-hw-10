@@ -6,12 +6,11 @@ function fetchCountries(name) {
     const url = `${BASE_URL}/name/${name}`;
     const FILTER = '?fields=name,capital,population,flags,languages';
     return fetch(`${url}${FILTER}`).then(response => {
-    if (!response.ok) {
+        if (!response.ok) {
       throw new Error(response.status);
     }
-    return response.json();
-  })
-  
+            return response.json();
+        })
 };
-
+        
 export default { fetchCountries };

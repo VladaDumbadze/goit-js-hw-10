@@ -41,5 +41,13 @@ function renderCounries(name) {
         refs.info.innerHTML = markup;
         return
     }
+    const markup = name.map(element => {return CTR(element);
+    }).join('');
+ 
+    refs.info.innerHTML = markup
+    
+    console.log(name);
+    console.log(markup);
+
     
 };
