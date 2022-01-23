@@ -31,7 +31,7 @@ function onSearch(e) {
 };
 
 function renderCounries(name) {
-    if (name.length > 15) {
+    if (name.length > 10) {
         Notify.info("Too many matches found. Please enter a more specific name.");
         return 
     }
