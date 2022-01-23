@@ -35,19 +35,24 @@ function renderCounries(name) {
         Notify.info("Too many matches found. Please enter a more specific name.");
         return 
     }
+    if (name.length > 2 && name.length < 10) {
+        const list = CTR(name);
+        refs.coutries.innerHTML = list;
+       console.log(list);
+    }
     if (name.length === 1) {
         console.log(name);
         const markup = CTRinf(name[0]);
         refs.info.innerHTML = markup;
         return
     }
-    const markup = name.map(element => {return CTR(element);
-    }).join('');
- 
-    refs.info.innerHTML = markup
+    
+   const markup = name.map(element => {return CTR(element);}).join('');
+    
+    refs.info.innerHTML = markup;
     
     console.log(name);
     console.log(markup);
-
+    
     
 };
